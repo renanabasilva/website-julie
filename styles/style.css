@@ -9,16 +9,17 @@
     font-family: var(--font1);
 }
 
-*:root {
+:root {
     --font0: 'Krub', sans-serif;
     --font1: 'Khula', sans-serif;
     --color0: #ffffff;
-    --color1: #418AA1;
+    --color1: #ADD6CC;
 }
 
 header {
+    margin: auto;
     text-align: center;
-    max-width: 1900px;
+    max-width: 1900px;    
 }
 
 header > div#email {    
@@ -36,22 +37,109 @@ header > div#email {
 }
 
 header > div#banner {
+    
     height: 140px;
-    width: auto;
+    width: auto;    
     margin: 60px 6vw;
     border-radius: 16px;
     background-attachment: scroll, scroll, fixed;
     background-image: url(../images/Nome_v1.png), url(../images/Estrelas_v1.png),url(../images/Logo_v2.png);
-    background-position: center, center, center top;
-    background-size: 40%, 80%, cover;
+    background-position: center, center, top;
+    background-size: 40%, 80%, contain;
     background-repeat: no-repeat;
-
 }
 
 header h1 {
     display: none;
 }
 
+/* --- Menu --- */
+
+nav > ul {
+    list-style: none;
+}
+
+nav > ul > li{
+    position: relative;
+    display: inline-block;
+}
+
+header > nav a {
+    display: block;
+    padding: 5px 25px;
+    margin: 0px 10px;
+    width: 150px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: black; 
+    transform: translateX(0px);
+    transition: transform, box-shadow, 0.2s ease-out;
+}
+
+nav > ul > li a:hover {
+    background-color: var(--color1);
+    border-radius: 5px;
+    box-shadow: 0 4PX 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-weight: 600;
+    transform: translateX(0px);
+    transition: transform, box-shadow, 0.2s ease-in;
+}
+
+ul ul{
+    list-style: none;
+    position: absolute;
+    width: 150px;
+    margin-top: -5px;
+    margin-left: 10px;
+    top: 100%;
+    display: none;
+    background-color: var(--color1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 5px 5px;
+}
+
+ul ul li {
+    margin-left: -10px;
+}
+
+ul ul a {
+    color: white;
+}
+
+ul li:hover > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 body {
-    background-color: #418AA1;
+    
+}
+
+main {
+    margin: 30px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: var(--color1);
+    height: 300px;
+}
+
+#social > li {
+    display: inline-block;
+    margin: 0 8px;       
+}
+
+#social > li img {
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+}
+
+footer > p {
+    margin: 30px;
 }
