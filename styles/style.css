@@ -39,9 +39,10 @@ header > div#email {
 
 header > div#banner {
     
-    height: 140px;
-    width: auto;    
-    margin: 60px 6vw;
+    height: 10vw;
+    width: auto;   
+    margin: 20px 6vw;
+    margin-top: 60px;  
     border-radius: 16px;
     background-attachment: scroll, scroll, fixed;
     background-image: url(../images/Nome_v1.png), url(../images/Estrelas_v1.png),url(../images/Logo_v3.png);
@@ -98,7 +99,6 @@ header h1 {
   visibility: hidden;
   z-index: 1;
   opacity: 0;
-  /* margin-top: -2px; */
   border-radius: 0 0 20px 20px;
   transition: all 0.2s ease-in-out; 
 }
@@ -134,8 +134,42 @@ header h1 {
 
 /* Corpo */
 
+body {
+  background-color: #f2fffc;
+}
+
 main {
     margin: 30px;
+}
+
+main > div.images {
+  /* display: flex;  
+  justify-content: space-around;  */
+  margin: auto; 
+  max-width: 1500px; 
+  column-count: 3;
+  column-gap: 20px;
+}
+
+div.block {
+  /* width: 400px;
+  align-self: auto;
+  max-width: 500px;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: rgb(255, 255, 255); */
+  margin-bottom: 20px;
+}
+
+.block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.block > img:hover {
+  
 }
 
 /* Rodapé */
@@ -143,7 +177,10 @@ main {
 footer {
     padding: 30px;
     text-align: center;
-    background-color: var(--color1);
+    /* background-color: var(--color1); */
+    background-image: url(../images/Logo_v3.png);
+    background-size: cover;
+    background-attachment: fixed;
     height: 300px;
 }
 
@@ -160,10 +197,11 @@ footer {
 
 footer > p {
     margin: 30px;
+    color: white;
 }
 
 footer a {
   text-decoration: none;
-  color: rgb(27, 27, 27);
+  color: rgb(255, 255, 255);
   font-weight: 600;
 }
