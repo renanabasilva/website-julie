@@ -143,35 +143,27 @@ main {
 }
 
 main > div.images {
-  /* display: flex;  
-  justify-content: space-around;  */
-  margin: auto; 
   max-width: 1500px; 
-  column-count: 3;
-  column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 div.block {
-  /* width: 400px;
-  align-self: auto;
-  max-width: 500px;
-  border-radius: 10px;
-  margin: 5px;
-  background-color: rgb(255, 255, 255); */
-  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  
 }
 
 .block img {
   width: 100%;
   height: auto;
-  display: block;
   border-radius: 10px;
 }
 
 .block > img:hover {
   
 }
-
 /* Rodapé */
 
 footer {
