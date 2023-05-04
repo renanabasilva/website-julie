@@ -164,6 +164,45 @@ div.block {
 .block > img:hover {
   
 }
+/*
+body {
+  background-color: #f2fffc;
+}
+
+main {
+    margin: 30px;
+}
+
+main > div.images {
+  /* display: flex;  
+  justify-content: space-around;  
+  margin: auto; 
+  max-width: 1500px; 
+  column-count: 3;
+  column-gap: 20px;
+}
+
+div.block {
+  /* width: 400px;
+  align-self: auto;
+  max-width: 500px;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: rgb(255, 255, 255); 
+  margin-bottom: 20px;
+}
+
+.block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.block > img:hover {
+  
+}*/
+
 /* Rodapé */
 
 footer {
