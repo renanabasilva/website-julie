@@ -139,20 +139,22 @@ body {
 }
 
 main {
-    margin: 30px;
+    /* margin: 30px; */
 }
 
 main > div.images {
-  max-width: 1500px; 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  margin: 0 6vw;
+  /* max-width: 1500px;  */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 div.block {
   width: 100%;
   height: auto;
-  
+  max-width: 450px;
 }
 
 .block img {
@@ -161,9 +163,7 @@ div.block {
   border-radius: 10px;
 }
 
-.block > img:hover {
-  
-}
+ 
 /*
 body {
   background-color: #f2fffc;
