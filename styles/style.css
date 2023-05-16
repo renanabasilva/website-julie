@@ -19,6 +19,7 @@
 body, html {
     background-color: var(--color0);
     font-family: var(--font0);
+    scroll-behavior: smooth !important;
 }
 
 body {
