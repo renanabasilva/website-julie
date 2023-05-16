@@ -30,3 +30,5 @@ function goTop() {
     // document.documentElement.scrollTop = 0; // Para navegadores modernos
     window.scrollTo({top: 0, behavior:'smooth'});
 }
+
+
