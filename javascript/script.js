@@ -1,6 +1,7 @@
 const menu = document.getElementById('menu')
 const submenu = document.getElementById('submenu')
 const anim = document.getElementById('animation')
+const animat = document.getElementById('animat')
 
 function clickMenu() {
     menu.classList.toggle('open');
@@ -9,8 +10,14 @@ function clickMenu() {
 }
 
 function clickSubMenu() {
-    submenu.classList.toggle('subopen')
-    anim.classList.toggle('rotate')
+    if (window.innerWidth <=768) {
+        submenu.classList.toggle('subopen')
+        anim.classList.toggle('rotate')
+    } else {
+        submenu.classList.toggle('click')
+        anim.classList.toggle('rotate')
+        animat.classList.toggle('click')
+    } 
 }
 
 window.onscroll = function() {

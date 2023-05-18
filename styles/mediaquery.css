@@ -1,2 +1,443 @@
 @charset "UTF-8";
 
+
+/* Typical Device Breakpoints 
+-------------------------------------------------
+Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {...}
+
+Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {...}
+
+Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {...}
+
+Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) {...}
+
+Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {...}
+*/
+
+/* Medium Devices */
+
+
+@media screen and (min-width: 768px) and (max-width:991px) {
+
+    header {        
+        width: 100%;
+        text-align: center;
+        /* padding: 0 30px; */
+        
+    }
+
+    /* Banner */
+
+    .banner {
+        margin: 30px auto;
+        align-self: center;
+        height: 15vw;
+        width: 90vw;
+        min-height: 7em;        
+        max-height: 11em;
+        max-width: 1600px;
+        border-radius: 16px;
+        background-attachment: scroll, scroll, fixed;
+        background-image: url(../images/Nome_v1.png), url(../images/Estrelas_v1.png),url(../images/Logo_v3.png);
+        background-position: center, center, top;
+        background-size: 40%, 80%, cover;
+        background-repeat: no-repeat;
+        transition: width .3s, height .3s;
+        transition-timing-function: ease;
+    }
+
+    .banner h1 {
+        display: none;
+    }
+
+    /* Buttons */
+
+    .material-symbols-rounded {
+        display: none;
+    }
+
+    /* Menu */
+
+    #menu {
+        position: static;
+        text-align: center;
+    }
+
+    #menu ul{
+        padding: 0 0;
+        background-color: var(--color0);
+        border-radius: 0 0 0 0;
+        box-shadow: none;
+    }
+
+    #menu li {
+        position: relative;
+        display: inline-block; 
+        padding: 0;        
+    }
+
+    .underline_menu a {
+        padding: 8px 5px;
+        padding-bottom: 4px;
+        color: var(--color1);
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 1em;  
+        width: 120px;
+        border-radius: 50px;        
+        transition: all 0.2s ease-in-out; 
+    }
+
+    .underline_menu a:hover {
+        background-color: var(--color2);
+        color: var(--color0);
+        font-weight: bold;
+        transition: all 0.2s ease-in-out; 
+    }    
+
+    /* underline menu */
+
+    .underline_menu a::after {
+        display: none;
+        width: 0;
+        height: 0;
+        bottom: 0;
+    }
+
+    /* Submenu */
+
+    .anim p::after{
+        background-image: url(../images/icons/arrow_black.png);
+        width: 12px;
+        height: 12px;
+        transition: all 0.3s linear;
+    }
+
+    .anim p:hover::after {
+        background-image: url(../images/icons/arrow_white.png);
+        transform: rotate(0deg);
+        transition: all 0.3s linear;
+    }
+
+    /* Para fazer o botão "animation" continuar com background quando selecionado o submenu */
+
+    #menu > .underline_menu > li.anim {
+        padding: 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    #menu > .underline_menu > li.anim > a {
+        border-radius: 20px 20px 0 0;
+        padding-bottom: 5px;
+    }
+
+    #menu > .underline_menu > li.anim a:hover {
+        box-shadow: none;
+    }
+
+    #menu li:hover > a {
+        background-color: var(--color2);
+        color: var(--color0);
+        font-weight: bold;
+    }
+
+    #menu li:hover p::after {
+        background-image: url(../images/icons/arrow_white.png);
+        transform: rotate(0deg);
+        transition: all 0.3s linear;
+    }
+
+
+    /* Configuração do submenu */
+
+    .anim ul#submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 120px;
+        max-height: 500px;
+        margin-left: 0px;
+        font-size: 1em;
+        background-color: var(--color2);
+        list-style: none;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        border-radius: 0 0 20px 20px;
+        transition: all 0.2s ease-in-out; 
+    }
+
+    /* Para o menu ficar aberto ao clicar */
+
+    .anim ul#submenu.click {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #menu li > a.click {
+        background-color: var(--color2);
+        color: var(--color0);
+        font-weight: bold;
+    }
+
+    .underline_menu li:hover > #submenu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #submenu > li {
+        position: relative;
+        padding: 0;
+    }
+
+    #submenu li a {
+        display: block;
+        padding: 7px 5px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+      }
+
+    #submenu > li:hover > a {
+        background-color: #6ca4a7 ;
+        box-shadow: none;
+        transition: all 0.2s ease;
+    }
+
+    /* ---- MAIN ---- */
+
+    /* Mansory layout */
+
+    .mansory-gallery {
+        column-gap: 1.5em;
+        column-count: 2;
+        text-align: center;
+        margin: 0 auto;        
+        padding: 0 2em;   
+    }
+
+    /* ---- FOOTER ---- */
+
+    footer {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    header {        
+        width: 100%;
+        text-align: center;
+        /* padding: 0 30px; */
+        
+    }
+
+    /* Banner */
+
+    .banner {
+        margin: 0px auto;
+        margin-top: 30px;
+        align-self: center;
+        height: 20vw;
+        width: 80vw;
+        min-height: 7em;        
+        max-height: 11em;
+        max-width: 1600px;
+        border-radius: 16px;
+        background-attachment: scroll, scroll, fixed;
+        background-image: url(../images/Nome_v1.png), url(../images/Estrelas_v1.png),url(../images/Logo_v3.png);
+        background-position: center, center, top;
+        background-size: 40%, 80%, cover;
+        background-repeat: no-repeat;
+        transition: width .3s, height .3s;
+        transition-timing-function: ease;
+    }
+
+    .banner h1 {
+        display: none;
+    }
+
+    /* Buttons */
+
+    .material-symbols-rounded {
+        display: none;
+    }
+
+    /* Menu */
+
+    #menu {
+        position: static;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    #menu ul{
+        padding: 0 0;
+        background-color: var(--color0);
+        border-radius: 0 0 0 0;
+        box-shadow: none;
+    }
+
+    #menu li {
+        position: relative;
+        display: inline-block; 
+        padding: 0;       
+    }
+
+    .underline_menu a {
+        padding: 8px 5px;
+        padding-bottom: 4px;
+        color: var(--color1);
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 1em;  
+        width: 120px;
+        border-radius: 50px;        
+        transition: all 0.2s ease-in-out; 
+    }
+
+    .underline_menu a:hover {
+        background-color: var(--color2);
+        color: var(--color0);
+        font-weight: bold;
+        transition: all 0.2s ease-in-out; 
+    }    
+
+    /* underline menu */
+
+    .underline_menu a::after {
+        display: none;
+        width: 0;
+        height: 0;
+        bottom: 0;
+    }
+
+    /* Submenu */
+
+    .anim p::after{
+        background-image: url(../images/icons/arrow_black.png);
+        width: 12px;
+        height: 12px;
+        transition: all 0.3s linear;
+    }
+
+    .anim p:hover::after {
+        background-image: url(../images/icons/arrow_white.png);
+        transform: rotate(0deg);
+        transition: all 0.3s linear;
+    }
+
+    /* Para fazer o botão "animation" continuar com background quando selecionado o submenu */
+
+    #menu > .underline_menu > li.anim {
+        padding: 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    #menu > .underline_menu > li.anim > a {
+        border-radius: 20px 20px 0 0;
+        padding-bottom: 4px;
+    }
+
+    #menu > .underline_menu > li.anim a:hover {
+        box-shadow: none;
+    }
+
+    #menu li:hover > a {
+        background-color: var(--color2);
+        color: var(--color0);
+        font-weight: bold;
+    }
+
+    #menu li:hover p::after {
+        background-image: url(../images/icons/arrow_white.png);
+        transform: rotate(0deg);
+        transition: all 0.3s linear;
+    }
+
+
+    /* Configuração do submenu */
+
+    .anim ul#submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 120px;
+        max-height: 500px;
+        margin-left: 0px;
+        font-size: 1em;
+        background-color: var(--color2);
+        list-style: none;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        border-radius: 0 0 20px 20px;
+        transition: all 0.2s ease-in-out; 
+    }
+
+    /* Para o menu ficar aberto ao clicar */
+
+    .anim ul#submenu.click {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #menu li > a.click {
+        background-color: var(--color2);
+        color: var(--color0);
+        font-weight: bold;
+    }
+
+    .underline_menu li:hover > #submenu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #submenu > li {
+        position: relative;
+        padding: 0;
+    }
+
+    #submenu li a {
+        display: block;
+        padding: 7px 5px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+      }
+
+    #submenu > li:hover > a {
+        background-color: #6ca4a7 ;
+        box-shadow: none;
+        transition: all 0.2s ease;
+    }
+
+    /* ---- MAIN ---- */
+
+    /* Mansory layout */
+
+    .mansory-gallery {
+        column-gap: 1.5em;
+        column-count: 3;
+        max-width: 1500px;
+        margin: 0 auto;        
+        padding: 0 3em;
+    }
+
+    /* ---- FOOTER ---- */
+
+    footer {
+        height: 250px;
+    }
+}
