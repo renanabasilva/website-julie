@@ -432,7 +432,7 @@ section {
 .photo {
     position: relative;
     display: block;
-    margin: 20px auto;
+    margin: 0px auto;
     background-color: rgb(226, 226, 226);
     overflow: hidden;
     max-width: 700px;
@@ -444,6 +444,10 @@ section {
     display: block;
     width: 100%;
     object-fit: cover;  
+}
+
+.photo #photo2 {
+    display: none;
 }
 
 .contact {
