@@ -17,6 +17,7 @@ function clickSubMenu() {
         submenu.classList.toggle('click')
         anim.classList.toggle('rotate')
         animat.classList.toggle('click')
+        anim.classList.toggle('click')
     } 
 }
 
@@ -37,5 +38,3 @@ function goTop() {
     // document.documentElement.scrollTop = 0; // Para navegadores modernos
     window.scrollTo({top: 0, behavior:'smooth'});
 }
-
-

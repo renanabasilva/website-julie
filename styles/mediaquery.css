@@ -34,7 +34,8 @@ Extra large devices (large laptops and desktops, 1200px and up)
     /* Banner */
 
     .banner {
-        margin: 30px auto;
+        margin: 0px auto;
+        margin-top: 30px;
         align-self: center;
         height: 15vw;
         width: 90vw;
@@ -66,6 +67,7 @@ Extra large devices (large laptops and desktops, 1200px and up)
     #menu {
         position: static;
         text-align: center;
+        margin: 20px 0;
     }
 
     #menu ul{
@@ -81,22 +83,29 @@ Extra large devices (large laptops and desktops, 1200px and up)
         padding: 0;        
     }
 
-    .underline_menu a {
+    ul.underline_menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .underline_menu > li > a {
+        /* position:absolute; */
         padding: 8px 5px;
         padding-bottom: 4px;
         color: var(--color1);
         text-decoration: none;
         font-weight: normal;
         font-size: 1em;  
-        width: 120px;
-        border-radius: 50px;        
+        width: fit-content;
+        border-radius: 13px;        
         transition: all 0.2s ease-in-out; 
     }
 
     .underline_menu a:hover {
         background-color: var(--color2);
         color: var(--color0);
-        font-weight: bold;
+        /* font-weight: bold; */
         transition: all 0.2s ease-in-out; 
     }    
 
@@ -128,12 +137,13 @@ Extra large devices (large laptops and desktops, 1200px and up)
 
     #menu > .underline_menu > li.anim {
         padding: 0;
-        border-radius: 20px 20px 0 0;
+        border-radius: 13px 13px 0 0;
     }
 
     #menu > .underline_menu > li.anim > a {
-        border-radius: 20px 20px 0 0;
+        border-radius: 13px 13px 0 0;
         padding-bottom: 5px;
+        width: 120px;
     }
 
     #menu > .underline_menu > li.anim a:hover {
@@ -143,7 +153,6 @@ Extra large devices (large laptops and desktops, 1200px and up)
     #menu li:hover > a {
         background-color: var(--color2);
         color: var(--color0);
-        font-weight: bold;
     }
 
     #menu li:hover p::after {
@@ -168,7 +177,7 @@ Extra large devices (large laptops and desktops, 1200px and up)
         z-index: 1;
         visibility: hidden;
         opacity: 0;
-        border-radius: 0 0 20px 20px;
+        border-radius: 0 0 13px 13px;
         transition: all 0.2s ease-in-out; 
     }
 
@@ -186,6 +195,12 @@ Extra large devices (large laptops and desktops, 1200px and up)
         font-weight: bold;
     }
 
+    #menu li p.click::after {
+        background-image: url(../images/icons/arrow_white.png);
+        transform: rotate(0deg);
+        transition: all 0.3s linear;
+    }
+
     .underline_menu li:hover > #submenu {
         display: block;
         opacity: 1;
@@ -197,14 +212,19 @@ Extra large devices (large laptops and desktops, 1200px and up)
         padding: 0;
     }
 
-    #submenu li a {
+    #submenu > li > a {
         display: block;
+        width: 120px;
         padding: 7px 5px;
+        padding-bottom: 4px;
         color: #fff;
+        font-size: 1em;
+        font-weight: normal;
         text-decoration: none;
+        border-radius: 13px;
         transition: all 0.2s ease;
-        text-transform: uppercase;
-      }
+        text-transform: uppercase;         
+    }
 
     #submenu > li:hover > a {
         background-color: #6ca4a7 ;
@@ -298,9 +318,9 @@ Extra large devices (large laptops and desktops, 1200px and up)
         color: var(--color1);
         text-decoration: none;
         font-weight: normal;
-        font-size: 1em;  
-        width: 120px;
-        border-radius: 50px;        
+        font-size: 1.05em;  
+        width: 130px;
+        border-radius: 13px;        
         transition: all 0.2s ease-in-out; 
     }
 
@@ -339,11 +359,11 @@ Extra large devices (large laptops and desktops, 1200px and up)
 
     #menu > .underline_menu > li.anim {
         padding: 0;
-        border-radius: 20px 20px 0 0;
+        border-radius: 13px 13px 0 0;
     }
 
     #menu > .underline_menu > li.anim > a {
-        border-radius: 20px 20px 0 0;
+        border-radius: 13px 13px 0 0;
         padding-bottom: 4px;
     }
 
@@ -370,7 +390,7 @@ Extra large devices (large laptops and desktops, 1200px and up)
         position: absolute;
         top: 100%;
         left: 0;
-        width: 120px;
+        width: 130px;
         max-height: 500px;
         margin-left: 0px;
         font-size: 1em;
@@ -379,7 +399,7 @@ Extra large devices (large laptops and desktops, 1200px and up)
         z-index: 1;
         visibility: hidden;
         opacity: 0;
-        border-radius: 0 0 20px 20px;
+        border-radius: 0 0 13px 13px;
         transition: all 0.2s ease-in-out; 
     }
 
@@ -415,7 +435,7 @@ Extra large devices (large laptops and desktops, 1200px and up)
         text-decoration: none;
         transition: all 0.2s ease;
         text-transform: uppercase;
-      }
+    }
 
     #submenu > li:hover > a {
         background-color: #6ca4a7 ;
@@ -439,5 +459,27 @@ Extra large devices (large laptops and desktops, 1200px and up)
 
     footer {
         height: 250px;
+    }
+
+    /* ==== PAGES ==== */
+
+    .resume img{
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+        border: 2px solid black;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .text-content {
+        margin: auto;
+        text-align: center;
+        max-width: 1000px;
+    }
+
+    .photo #photo1 {
+        display: none;
     }
 }
