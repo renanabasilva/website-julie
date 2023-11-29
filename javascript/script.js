@@ -5,6 +5,7 @@ const animat = document.getElementById('animat')
 
 function clickMenu() {
     menu.classList.toggle('open');
+    menu.classList.toggle('no-transition');
     submenu.classList.remove('subopen')
     anim.classList.remove('rotate')
 }
