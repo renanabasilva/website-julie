@@ -152,12 +152,28 @@ header {
     width: 100%;    
     text-align: left; 
     z-index: 9;
-    transition: top 0.6s ease-in-out !important;    
+    opacity: 1;
+    transition: top 0.5s ease-in-out !important;    
 }
 
-#menu.no-transition {
+.no-transition {
+    position: fixed;
+    top: 0;
+    z-index: 9 !important;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    transition: none !important;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #menu.open {
