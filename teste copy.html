@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastar com Touch</title>
+    <style>
+        #elemento-arrastavel {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="elemento-arrastavel"></div>
+
+    <script>
+        var elementoArrastavel = document.getElementById('elemento-arrastavel');
+
+        var offsetX, offsetY;
+
+        elementoArrastavel.addEventListener('touchstart', function (e) {
+            var touch = e.touches[0];
+            offsetX = touch.clientX - elementoArrastavel.getBoundingClientRect().left;
+            offsetY = touch.clientY - elementoArrastavel.getBoundingClientRect().top;
+        });
+
+        elementoArrastavel.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+            console.log(e)
+            var touch = e.touches[0];
+            var x = touch.clientX - offsetX;
+            var y = touch.clientY - offsetY;
+
+            elementoArrastavel.style.left = x + 'px';
+            elementoArrastavel.style.top = y + 'px';
+        });
+
+        elementoArrastavel.addEventListener('touchend', function () {
+            // Alguma ação ao soltar o toque (touch)
+        });
+    </script>
+
+</body>
+</html>

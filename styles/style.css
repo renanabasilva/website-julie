@@ -504,3 +504,37 @@ section {
     display: none;
     width: 100%;
 }
+
+/* Projects */
+
+h2 {
+    margin: 30px 10px;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.projects-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 3em;    
+}
+
+.projects-gallery img {
+    
+}
+
+.projects-tittle {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 6px 25px;
+    border-radius: 50px;
+    background-color: var(--color2);
+    color: var(--color0);    
+    text-align: center;
+    font-weight: 600;
+}
