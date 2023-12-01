@@ -249,6 +249,19 @@ Extra large devices (large laptops and desktops, 1200px and up)
     footer {
         height: 250px;
     }
+
+    /* ===== Pages ===== */
+
+    /* Projects */
+
+    .projects-gallery {
+        max-width: 800px;
+    }
+
+    .projects-tittle{
+        margin: 10px auto;
+        width: 40%;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -469,6 +482,8 @@ Extra large devices (large laptops and desktops, 1200px and up)
 
     /* ==== PAGES ==== */
 
+    /* About */
+
     .resume img{
         display: block;
         width: 100%;
@@ -476,6 +491,14 @@ Extra large devices (large laptops and desktops, 1200px and up)
         margin: 20px auto;
         border: 2px solid black;
     }
+
+    /* Projects */
+
+    .projects-gallery {
+        flex-direction: row;
+    }
+
+    
 }
 
 @media only screen and (min-width: 1200px) {
