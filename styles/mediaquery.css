@@ -280,7 +280,7 @@ Extra large devices (large laptops and desktops, 1200px and up)
         margin-top: 30px;
         align-self: center;
         height: 20vw;
-        width: 80vw;
+        width: 90vw;
         min-height: 7em;        
         max-height: 11em;
         max-width: 1600px;
@@ -496,9 +496,23 @@ Extra large devices (large laptops and desktops, 1200px and up)
 
     .projects-gallery {
         flex-direction: row;
+        justify-content: center;
     }
 
-    
+    .projects-gallery .gallery-item img {
+        width: 28vw;
+        max-width: 490px;
+        height: 22vw;
+        max-height: 400px;
+    }
+
+    /* .gallery-item img {
+        display: block;
+        width: 100%;
+        object-fit: cover;  
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+    }     */
 }
 
 @media only screen and (min-width: 1200px) {

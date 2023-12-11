@@ -24,7 +24,8 @@ body, html {
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto; /* define três linhas - cabeçalho, corpo e rodapé */
+    grid-template-rows: auto 1fr auto; 
+    /* define três linhas - cabeçalho, corpo e rodapé */
     min-height: 100vh; /* define a altura mínima do corpo da página como a altura total da viewport */
     overflow-x: hidden;
     height: 100vh;
@@ -385,6 +386,10 @@ footer {
 
 /* Social Media */
 
+/* #social {
+    min-width: 310px;
+} */
+
 #social > li {
     display: inline-block;
 }
@@ -532,4 +537,28 @@ h2 {
     color: var(--color0);    
     text-align: center;
     font-weight: 600;
+}
+
+#client-projects {
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.clients-logo {
+    min-width: 310px;
+    max-width: 70vw;
+}
+
+.clients-logo > li {
+    display: inline-block;
+}
+
+.clients-logo > li img {    
+    width: auto;
+    height: 50px;
+    margin: 0 8px;
 }
