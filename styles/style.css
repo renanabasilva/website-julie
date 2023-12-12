@@ -14,6 +14,7 @@
     --color0: #ffffff;
     --color1: #000000;
     --color2: #7EC0C4;
+    --color3: #878787;
 }
 
 body, html {
@@ -523,34 +524,45 @@ h2 {
 .projects-gallery {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
-    max-width: 1500px;
+    gap: 2em;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 2em;    
 }
 
 .projects-tittle {
     margin: 10px auto;
-    padding: 6px 25px;
+    padding: 10px 25px;
+    padding-top: 15px;
     border-radius: 50px;
     background-color: var(--color2);
-    color: var(--color0);    
+    color: var(--color0); 
     text-align: center;
     font-weight: 600;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.project-description {
+    color: var(--color3);
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 #client-projects {
-    max-width: 1500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
 }
 
 .clients-logo {
     min-width: 310px;
     max-width: 70vw;
+    margin: 0 auto;
 }
 
 .clients-logo > li {
@@ -561,4 +573,8 @@ h2 {
     width: auto;
     height: 50px;
     margin: 0 8px;
+}
+
+.client-projects .gallery-item{
+    margin-bottom: 0.5em;
 }

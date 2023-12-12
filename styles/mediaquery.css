@@ -495,8 +495,11 @@ Extra large devices (large laptops and desktops, 1200px and up)
     /* Projects */
 
     .projects-gallery {
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
+        columns: 3;
     }
 
     .projects-gallery .gallery-item img {
