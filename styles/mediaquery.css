@@ -257,11 +257,6 @@ Extra large devices (large laptops and desktops, 1200px and up)
     .projects-gallery {
         max-width: 800px;
     }
-
-    .projects-tittle{
-        margin: 10px auto;
-        width: 40%;
-    }
 }
 
 @media screen and (min-width: 992px) {
@@ -269,8 +264,7 @@ Extra large devices (large laptops and desktops, 1200px and up)
     header {        
         width: 100%;
         text-align: center;
-        /* padding: 0 30px; */
-        
+        /* padding: 0 30px; */        
     }
 
     /* Banner */
