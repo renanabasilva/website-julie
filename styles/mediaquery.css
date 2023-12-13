@@ -498,21 +498,32 @@ Extra large devices (large laptops and desktops, 1200px and up)
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         columns: 3;
+    }
+
+    .gallery-container {
+        width: 28vw;
+        max-width: 490px;
     }
 
     .projects-gallery .gallery-item img {
         width: 28vw;
         max-width: 490px;
-        height: 22vw;
+        height: 28vw;
         max-height: 400px;
+    }
+
+    .projects-tittle {
+        
+        height: 3em;
+        
     }
 
     /* .gallery-item img {
         display: block;
         width: 100%;
-        object-fit: cover;  
+        object-fit: contain;  
         opacity: 1;
         transition: all 0.2s ease-in-out;
     }     */
