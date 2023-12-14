@@ -548,7 +548,7 @@ h2 {
     text-transform: uppercase;
 }
 
-.project-description {
+.project-image-description {
     color: var(--color3);
     font-size: 1em;
     font-weight: 700;
@@ -582,4 +582,29 @@ h2 {
 
 .client-projects .gallery-item{
     margin: 0.5em 0;
+}
+
+/* Individual Project */
+
+.project-description {
+    margin: 0 auto;
+    margin-bottom: 2em;
+    padding: 0 2em;
+    text-align: center;
+    max-width: 1500px;
+}
+
+.project-description h2 {
+    margin-bottom: 0.5em;
+}
+
+.project-description > a {
+    text-decoration: none;
+}
+
+.project-description .projects-tittle {
+    width: 50vw;
+    max-width: 300px;
+    min-width: 250px;
+    height: 2.3em;
 }
