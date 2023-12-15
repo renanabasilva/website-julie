@@ -598,13 +598,23 @@ h2 {
     margin-bottom: 0.5em;
 }
 
-.project-description > a {
-    text-decoration: none;
-}
-
 .project-description .projects-tittle {
+    text-decoration: none;
     width: 50vw;
     max-width: 300px;
     min-width: 250px;
     height: 2.3em;
+}
+
+.project-description p {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.see-more, .see-more a {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1200px;
+    text-decoration: none;
+    color: var(--color1);
 }
